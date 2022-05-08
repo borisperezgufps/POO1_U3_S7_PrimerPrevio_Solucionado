@@ -52,6 +52,7 @@ public class Colegio {
 		p.setNumeroTarjeton(numeroTarjeton);
 		p.setNombreFormulaEstudiante(formula);
 		
+		
 		if(!repiteNumeroTarjeton(numeroTarjeton)) {
 			if(cont<candidatos.length) {
 				candidatos[cont] = p;
@@ -104,6 +105,7 @@ public class Colegio {
 		for(int t=0;t<candidatos.length;t++) {
 			Candidato c = candidatos[t];
 			if(c!=null) {
+				
 				// Para sacar los personeros
 				if(c instanceof Personero) {
 					if(maxVotosPersonero<c.getVotos()) {
@@ -111,6 +113,7 @@ public class Colegio {
 						nombreCompletoPersoneroGanador = c.getNombre() + " " + c.getApellido();
 					}
 				}
+				
 				// Para sacar los representantes
 				if(c instanceof Representante) {
 					if(maxVotosRepresentante<c.getVotos()) {
@@ -144,3 +147,11 @@ public class Colegio {
 	}
 	
 }
+
+
+
+
+
+
+
+
